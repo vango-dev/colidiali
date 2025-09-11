@@ -1,0 +1,8 @@
+- Marker's color
+- First zoom level, when searching from home page
+- display departures with dates near to the selected date
+- Date input will serve only to order the departures. The list will be divide in two parts
+
+
+
+- How many departures should be displayed for one transporter in the last

@@ -1,0 +1,38 @@
+name: Promote Artifact
+
+# on:
+#   pull_request:
+#     types:
+#       - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Docker compose up
+        uses: isbang/compose-action@v1.5.1
+        with:
+          compose-file: "./docker-compose.yml"
+          services: |
+            vango-app
+            mango-db
+
+      - name: Docker Login
+        run: docker login -u midopeace -p ${{ secrets.DOCKER_REPO_PASSWORD }}
+
+      - name: Docker tag frontend image
+        run: docker tag van-finder-vango-app midopeace/vango-finder:frontend
+
+      - name: Docker tag backend image
+        run: docker tag van-finder-mango-db midopeace/vango-finder:backend
+
+      - name: Push fontend to docker hub
+        run: docker push midopeace/vango-finder:frontend
+
+      - name: Push backend to docker hub
+        run: docker push  midopeace/vango-finder:backend

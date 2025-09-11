@@ -1,0 +1,47 @@
+Scenario
+Suppose you have an online service where users need to verify their phone numbers during registration. You decide to use Twilio's Verify API for this purpose.
+Step-by-Step Cost Analysis
+
+    Verification Request
+        When a user registers, you send an SMS verification code to their phone number.
+        Twilio charges $0.05 per verification request.
+
+    Verification Check
+        After the user receives the SMS, they enter the verification code on your website.
+        You then use Twilio's API to check if the entered code is correct.
+        Twilio charges $0.01 per verification check.
+
+
+
+Example Calculation
+Day 1: You have 1,000 users registering and verifying their phone numbers.
+
+    Verification Requests Cost
+        1,000 verification requests at $0.05 each.
+        Total cost: 1,000×0.05=$50.001,000×0.05=$50.00
+
+    Verification Checks Cost
+        1,000 verification checks at $0.01 each.
+        Total cost: 1,000×0.01=$10.001,000×0.01=$10.00
+
+Total Daily Cost for 1,000 Users
+
+    Verification requests: $50.00
+    Verification checks: $10.00
+    Total: $60.00
+
+Monthly Cost Estimation
+
+If you expect to have 1,000 users registering and verifying their phone numbers every day:
+
+    Daily Cost: $60.00
+    Monthly Cost: 60×30=$1,80060×30=$1,800
+
+Additional Considerations
+
+    SMS Messaging Costs:
+        If you also send other types of SMS messages to your users (e.g., notifications, reminders), this will incur additional costs.
+        For the US, sending or receiving a standard SMS message is $0.0079 each​ (Twilio)​.
+
+    Volume Discounts:
+        Twilio offers volume discounts as your usage grows. It's worth discussing with their sales team if you anticipate high usage to potentially reduce costs.

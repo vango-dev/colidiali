@@ -1,0 +1,4 @@
+{
+  "port": 1337,
+  "dbUri": "mongodb+srv://iliassanati:W2X7HaYVF8i8YwC@colidiali.jyryj8h.mongodb.net/coli_diali_db"
+}
