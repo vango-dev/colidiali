@@ -6,6 +6,7 @@ import routes from '../routes.js';
 import deserializeUser from '../middleware/deserializeUser.js';
 
 const allowedOrigins = [
+  'http://localhost:3000',
   'http://localhost:3006',
   'http://localhost:1337',
   'http://localhost:3006',
@@ -14,6 +15,7 @@ const allowedOrigins = [
   'https://van-finder.onrender.com',
   'http://van-finder.onrender.com',
   'https://colidiali.onrender.com',
+  'https://colidiali-frontend2.onrender.com',
 ];
 
 function createServer() {
