@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/568.7c34d771.chunk.js","mappings":"4KAEA,MAIA,EAJiBA,KACRC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,U","sources":["pages/TestPage.js"],"sourcesContent":["import React from 'react';\n\nconst TestPage = () => {\n  return <div>asdads</div>;\n};\n\nexport default TestPage;\n"],"names":["TestPage","_jsx","children"],"sourceRoot":""}
